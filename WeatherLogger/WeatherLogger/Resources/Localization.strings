@@ -1,0 +1,23 @@
+/* 
+  Localization.strings
+  WeatherLogger
+
+  Created by Swati on 25/02/21.
+  Copyright © 2021 Swati. All rights reserved.
+*/
+
+"weather_screen_title" = "Weather Logger";
+"errorAlertTitle" = "Unable to Fetch Location Data";
+"alertOkButtonTitle" = "Okay";
+"alertDescription" = "Please try again";
+"temperature" = "Current Temp: %@ Min Temp: %@ Max Temp: %@";
+"coordinate" = "Lat: %@ Long: %@";
+"saveButtonTitle" = "Save Weather Details";
+"retrieveWeatherData" = "Retrieve Data";
+"successAlertTitle" = "Save Data";
+"successAlertDesc" = "Data saved successfully! Press Retrieve Data for viewing";
+"weatherDetailNavTitle" = "Weather Details";
+"noDataAvailable" = "No Data Available";
+"noDataAvailableDesc" = "Save some Data to view details";
+"dateString" = "Data saved on: %@";
+"errorAlertDesc" = "Unable to save Data";
