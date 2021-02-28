@@ -73,7 +73,7 @@ final class WeatherDetailTableCell: UITableViewCell {
         let footerStackView = verticalStack()
         parentstackView.addArrangedSubview(footerStackView)
         
-        let tempLbl = makeLabel()
+        let tempLbl = makeLabel(font: UIFont.italicSystemFont(ofSize: 15), color: .black)
         footerStackView.addArrangedSubview(tempLbl)
         
         let coordinateLbl = makeLabel(font: UIFont.systemFont(ofSize: 15))

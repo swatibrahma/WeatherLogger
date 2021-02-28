@@ -11,7 +11,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
-final class WeatherLoggerViewController: UIViewController, WeatherLoggerViewControllable {
+final class WeatherLoggerViewController: UIViewController {
     private let interactor: WeatherLoggerInteractorable
     
     private let localizable: Localization
@@ -50,6 +50,12 @@ final class WeatherLoggerViewController: UIViewController, WeatherLoggerViewCont
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        makeLocationManager()
+        setupBackgroundView()
+        setupView()
+    }
+    
+    private func makeLocationManager() {
         self.locationManager.requestAlwaysAuthorization()
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
@@ -57,8 +63,6 @@ final class WeatherLoggerViewController: UIViewController, WeatherLoggerViewCont
             locationManager.distanceFilter = kCLDistanceFilterNone
             locationManager.startUpdatingLocation()
         }
-        setupBackgroundView()
-        setupView()
     }
     
     private func setupBackgroundView() {
@@ -66,7 +70,6 @@ final class WeatherLoggerViewController: UIViewController, WeatherLoggerViewCont
         imageView.autoresizesSubviews = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         self.view.insertSubview(imageView, at: 0)
-
 
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -191,16 +194,6 @@ final class WeatherLoggerViewController: UIViewController, WeatherLoggerViewCont
         return saveBtn
     }
     
-    func showError(error: Error) {
-        showAlert(title: self.localizable.errorAlertTitle,
-                  message: error.localizedDescription)
-    }
-    
-    func showSuccess() {
-        showAlert(title: self.localizable.successAlertTitle,
-                  message: self.localizable.successAlertDesc)
-    }
-    
     private func showAlert(title: String, message: String) {
         DispatchQueue.main.async {
             let alert = UIAlertController(title: title,
@@ -214,7 +207,9 @@ final class WeatherLoggerViewController: UIViewController, WeatherLoggerViewCont
             }
         }
     }
-    
+}
+
+extension WeatherLoggerViewController: WeatherLoggerViewControllable {
     func showWeatherDetails(weatherModel: WeatherViewModel) {
         self.viewModel = weatherModel
         DispatchQueue.main.async { [weak self] in
@@ -226,6 +221,16 @@ final class WeatherLoggerViewController: UIViewController, WeatherLoggerViewCont
             self.saveButton?.isEnabled = true
             self.retrieveButton?.isEnabled = true
         }
+    }
+    
+    func showError(error: Error) {
+        showAlert(title: self.localizable.errorAlertTitle,
+                  message: error.localizedDescription)
+    }
+    
+    func showSuccess() {
+        showAlert(title: self.localizable.successAlertTitle,
+                  message: self.localizable.successAlertDesc)
     }
 }
 

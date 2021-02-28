@@ -126,6 +126,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D961C38225EBC4B000E07C6D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D972C73425E7CA4900B59ECD /* WeatherServiceInterface.swift */,
+				D972C73625E7CA6300B59ECD /* WeatherServiceManager.swift */,
+				D972C73825E7CA7600B59ECD /* ServiceConstants.swift */,
+				D972C73A25E7CA8D00B59ECD /* ServiceManagerInterface.swift */,
+				D972C73C25E7CAA500B59ECD /* MockWeatherServiceManager.swift */,
+				D972C73E25E7CBF700B59ECD /* ServiceManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		D9661EE225EA5A4F00F7CD33 /* FrontEnd */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,7 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				D9661EEE25EAAB1800F7CD33 /* Utility */,
-				D98E801B25E9455300744F43 /* CoreData */,
 				D972C72925E7C4A400B59ECD /* Resources */,
 				D972C72825E7C48800B59ECD /* Models */,
 				D972C72725E7C47B00B59ECD /* BackEnd */,
@@ -228,12 +240,8 @@
 		D972C72725E7C47B00B59ECD /* BackEnd */ = {
 			isa = PBXGroup;
 			children = (
-				D972C73425E7CA4900B59ECD /* WeatherServiceInterface.swift */,
-				D972C73625E7CA6300B59ECD /* WeatherServiceManager.swift */,
-				D972C73825E7CA7600B59ECD /* ServiceConstants.swift */,
-				D972C73A25E7CA8D00B59ECD /* ServiceManagerInterface.swift */,
-				D972C73C25E7CAA500B59ECD /* MockWeatherServiceManager.swift */,
-				D972C73E25E7CBF700B59ECD /* ServiceManager.swift */,
+				D961C38225EBC4B000E07C6D /* Service */,
+				D98E801B25E9455300744F43 /* CoreData */,
 			);
 			path = BackEnd;
 			sourceTree = "<group>";
