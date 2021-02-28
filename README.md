@@ -1,6 +1,6 @@
 # WeatherLogger
 
-This application is used for saveing weather conditions for your current location.
+This application is used for viewing & saving weather conditions for your current location.
 
 ## Prerequisite
 
@@ -46,6 +46,16 @@ WeatherModel - Request Model.
 WeatherResponseModel - Response model.
 WeatherLog - Core Data Entity.
 
+
+Sample UI:
+
+![Screenshot 2021-02-28 at 12 09 25 AM](https://user-images.githubusercontent.com/28644576/109419927-ea501f80-79f5-11eb-91b8-67db2a223b2a.png)
+
+![Screenshot 2021-02-28 at 12 09 42 AM](https://user-images.githubusercontent.com/28644576/109419940-f5a34b00-79f5-11eb-97f2-394893347626.png)
+
+![Screenshot 2021-02-28 at 12 09 56 AM](https://user-images.githubusercontent.com/28644576/109419951-00f67680-79f6-11eb-9360-cf8def3fb939.png)
+
+![Screenshot 2021-02-28 at 6 54 44 PM](https://user-images.githubusercontent.com/28644576/109420011-3d29d700-79f6-11eb-8172-46b7ad4a3049.png)
 
 
 
