@@ -39,7 +39,7 @@ final class WeatherDetailsViewController: UIViewController {
     private func createTableView() {
         self.navigationItem.title = localizable.weatherDetailNavTitle
         let tableView = UITableView(frame: self.view.frame, style: .plain)
-        tableView.backgroundColor = .brown
+        tableView.backgroundColor = .white
         tableView.register(WeatherDetailTableCell.self,
                            forCellReuseIdentifier: "tablecell")
         tableView.dataSource = self

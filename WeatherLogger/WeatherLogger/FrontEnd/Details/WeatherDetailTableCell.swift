@@ -48,7 +48,7 @@ final class WeatherDetailTableCell: UITableViewCell {
     }
     
     private func makeLabel(font: UIFont = UIFont.systemFont(ofSize: 20),
-                           color: UIColor = .white) -> UILabel {
+                           color: UIColor = .black) -> UILabel {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.numberOfLines = 0
@@ -58,28 +58,28 @@ final class WeatherDetailTableCell: UITableViewCell {
     }
     
     func setupCellView() {
-        contentView.backgroundColor = .gray
+        contentView.backgroundColor = .lightGray
         let parentstackView = verticalStack()
         
         let topstackView = horizontalStack()
         parentstackView.addArrangedSubview(topstackView)
         
-        let countryLbl = makeLabel()
+        let countryLbl = makeLabel(font: .boldSystemFont(ofSize: 20))
         topstackView.addArrangedSubview(countryLbl)
         
-        let cityLbl = makeLabel()
+        let cityLbl = makeLabel(font: .boldSystemFont(ofSize: 20))
         topstackView.addArrangedSubview(cityLbl)
         
         let footerStackView = verticalStack()
         parentstackView.addArrangedSubview(footerStackView)
         
-        let tempLbl = makeLabel(font: UIFont.italicSystemFont(ofSize: 15), color: .black)
+        let tempLbl = makeLabel(font: UIFont.italicSystemFont(ofSize: 15))
         footerStackView.addArrangedSubview(tempLbl)
         
         let coordinateLbl = makeLabel(font: UIFont.systemFont(ofSize: 15))
         footerStackView.addArrangedSubview(coordinateLbl)
         
-        let dateLbl = makeLabel(font: UIFont.italicSystemFont(ofSize: 15), color: .black)
+        let dateLbl = makeLabel(font: UIFont.italicSystemFont(ofSize: 15))
         footerStackView.addArrangedSubview(dateLbl)
         
         contentView.addSubview(parentstackView)
