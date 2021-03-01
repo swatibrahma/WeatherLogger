@@ -55,7 +55,7 @@ Sample UI:
 
 ![Screenshot 2021-02-28 at 12 09 56 AM](https://user-images.githubusercontent.com/28644576/109419951-00f67680-79f6-11eb-9360-cf8def3fb939.png)
 
-![Screenshot 2021-02-28 at 6 54 44 PM](https://user-images.githubusercontent.com/28644576/109420011-3d29d700-79f6-11eb-8172-46b7ad4a3049.png)
+![Screenshot 2021-03-01 at 12 50 42 PM](https://user-images.githubusercontent.com/28644576/109464450-b07e2800-7a8c-11eb-890c-8fba5b2aad6a.png)
 
 
 
