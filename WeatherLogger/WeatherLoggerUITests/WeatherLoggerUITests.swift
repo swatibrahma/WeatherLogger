@@ -16,6 +16,7 @@ class WeatherLoggerUITests: XCTestCase {
 
     func testWeatherLoggerScreen() {
         let app = XCUIApplication()
+        app.launchEnvironment = ["env": "Mock"]
         app.launch()
         addUIInterruptionMonitor(withDescription: "System Dialog") {
           (alert) -> Bool in

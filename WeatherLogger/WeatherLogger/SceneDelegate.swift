@@ -19,7 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let winScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: winScene)
-        let rootVC = WeatherLoggerConfigurator().configViewController()
+        var appEnvironment: AppEnvironment = .Dev
+        if let initialEnv = ProcessInfo.processInfo.environment["env"] {
+            appEnvironment = AppEnvironment(rawValue:initialEnv) ?? .Dev
+        }
+        let rootVC = WeatherLoggerConfigurator().configViewController(env: appEnvironment)
         let nv = UINavigationController(rootViewController: rootVC)
         window?.rootViewController = nv
         window?.makeKeyAndVisible()

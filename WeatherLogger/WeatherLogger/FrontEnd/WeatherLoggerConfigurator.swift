@@ -9,10 +9,10 @@
 import UIKit
 
 final class WeatherLoggerConfigurator {
-    func configViewController() -> UIViewController {
+    func configViewController(env: AppEnvironment = .Dev) -> UIViewController {
         var service: WeatherServiceInterface = WeatherServiceManager()
         let coreDataManager : WeatherDataInterface = WeatherDataManager()
-        if ServiceConstants.currentEnvironment == .Mock {
+        if env == .Mock {
             service = MockWeatherServiceManager()
         }
         let router = WeatherLoggerRouter()
